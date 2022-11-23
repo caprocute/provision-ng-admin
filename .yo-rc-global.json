@@ -1,0 +1,12 @@
+{
+  "generator-jhipster-ngxadmin:1.0.0": {
+    "promptValues": {
+      "packageName": "com.metasohi.provision"
+    }
+  },
+  "generator-jhipster:7.8.1": {
+    "promptValues": {
+      "nativeLanguage": "en"
+    }
+  }
+}
