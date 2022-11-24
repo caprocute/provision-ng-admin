@@ -119,7 +119,7 @@
     "ngx-echarts": "4.2.2",
     "ngx-infinite-scroll": "13.0.1",
     "ngx-webstorage": "9.0.0",
-    "node-sass": "4.12.0",
+    "node-sass": "^6.0.0",
     "normalize.css": "6.0.0",
     "pace-js": "1.0.2",
     "roboto-fontface": "0.8.0",

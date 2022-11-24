@@ -158,11 +158,11 @@ spring:
       client:
         provider:
           oidc:
-            issuer-uri: http://metasohi.com:8089/auth/realms/jhipster
+            issuer-uri: http://metasohi.com:8089/auth/realms/Provision
         registration:
           oidc:
             client-id: web_app
-            client-secret: web_app
+            client-secret: N4Ze8xyfiHW8FFQ1f2LhPJf2Q145NVvE
             scope: openid, profile, email, offline_access # last one for refresh tokens
 
 server:

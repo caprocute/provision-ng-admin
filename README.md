@@ -30,7 +30,11 @@ Before you can build this project, you must install and configure the following 
 After installing Node, you should be able to run the following command to install development tools.
 You will only need to run this command when dependencies change in [package.json](package.json).
 
+Install node-sass first because of error. See https://stackoverflow.com/questions/45801457/node-js-python-not-found-exception-due-to-node-sass-and-node-gyp for more detail
+
 ```
+npm install node-sass@6.0.0
+
 npm install
 ```
 
