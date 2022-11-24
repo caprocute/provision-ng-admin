@@ -1,0 +1,33 @@
+{
+  "provisionApp": {
+    "provinces": {
+      "home": {
+        "title": "Provinces",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Provinces",
+        "createOrEditLabel": "Create or edit a Provinces",
+        "notFound": "No Provinces found"
+      },
+      "created": "A new Provinces is created with identifier {{ param }}",
+      "updated": "A Provinces is updated with identifier {{ param }}",
+      "deleted": "A Provinces is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Provinces {{ id }}?"
+      },
+      "detail": {
+        "title": "Provinces"
+      },
+      "code": "Code",
+      "name": "Name",
+      "nameEn": "Name En",
+      "fullName": "Full Name",
+      "fullNameEn": "Full Name En",
+      "codeName": "Code Name",
+      "administrativeUnitId": "Administrative Unit Id",
+      "administrativeRegionId": "Administrative Region Id",
+      "districts": "Districts",
+      "administrativeRegions": "Administrative Regions",
+      "administrativeUnits": "Administrative Units"
+    }
+  }
+}

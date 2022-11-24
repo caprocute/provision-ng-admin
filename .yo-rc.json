@@ -24,10 +24,12 @@
     "enableHibernateCache": true,
     "enableSwaggerCodegen": false,
     "enableTranslation": true,
+    "entities": ["AdministrativeRegions", "AdministrativeUnits", "Provinces", "Districts", "Wards"],
     "entitySuffix": "",
     "jhiPrefix": "jhi",
     "jhipsterVersion": "7.8.1",
     "languages": ["en", "vi"],
+    "lastLiquibaseTimestamp": 1669262655000,
     "messageBroker": false,
     "nativeLanguage": "en",
     "otherModules": [

@@ -1,0 +1,91 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-administrative-units-heading"
+        data-cy="AdministrativeUnitsCreateUpdateHeading"
+        jhiTranslate="provisionApp.administrativeUnits.home.createOrEditLabel"
+      >
+        Create or edit a Administrative Units
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.administrativeUnits.fullName" for="field_fullName">Full Name</label>
+          <input type="text" class="form-control" name="fullName" id="field_fullName" data-cy="fullName" formControlName="fullName" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.administrativeUnits.fullNameEn" for="field_fullNameEn">Full Name En</label>
+          <input
+            type="text"
+            class="form-control"
+            name="fullNameEn"
+            id="field_fullNameEn"
+            data-cy="fullNameEn"
+            formControlName="fullNameEn"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.administrativeUnits.shortName" for="field_shortName">Short Name</label>
+          <input type="text" class="form-control" name="shortName" id="field_shortName" data-cy="shortName" formControlName="shortName" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.administrativeUnits.shortNameEn" for="field_shortNameEn"
+            >Short Name En</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            name="shortNameEn"
+            id="field_shortNameEn"
+            data-cy="shortNameEn"
+            formControlName="shortNameEn"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.administrativeUnits.codeName" for="field_codeName">Code Name</label>
+          <input type="text" class="form-control" name="codeName" id="field_codeName" data-cy="codeName" formControlName="codeName" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.administrativeUnits.codeNameEn" for="field_codeNameEn">Code Name En</label>
+          <input
+            type="text"
+            class="form-control"
+            name="codeNameEn"
+            id="field_codeNameEn"
+            data-cy="codeNameEn"
+            formControlName="codeNameEn"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -7,6 +7,11 @@
       "jhipster-needle-menu-add-element": "JHipster will add additional menu entries here (do not translate!)",
       "entities": {
         "main": "Thực thể",
+        "administrativeRegions": "Administrative Regions",
+        "administrativeUnits": "Administrative Units",
+        "provinces": "Provinces",
+        "districts": "Districts",
+        "wards": "Wards",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

@@ -1,0 +1,33 @@
+{
+  "provisionApp": {
+    "provinces": {
+      "home": {
+        "title": "Provinces",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Provinces",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Provinces",
+        "notFound": "No Provinces found"
+      },
+      "created": "Một Provinces mới được tạo với định danh {{ param }}",
+      "updated": "Một Provinces cập nhật với định danh {{ param }}",
+      "deleted": "Một Provinces đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Provinces {{ id }}?"
+      },
+      "detail": {
+        "title": "Provinces"
+      },
+      "code": "Code",
+      "name": "Name",
+      "nameEn": "Name En",
+      "fullName": "Full Name",
+      "fullNameEn": "Full Name En",
+      "codeName": "Code Name",
+      "administrativeUnitId": "Administrative Unit Id",
+      "administrativeRegionId": "Administrative Region Id",
+      "districts": "Districts",
+      "administrativeRegions": "Administrative Regions",
+      "administrativeUnits": "Administrative Units"
+    }
+  }
+}

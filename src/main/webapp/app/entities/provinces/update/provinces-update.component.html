@@ -1,0 +1,152 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-provinces-heading" data-cy="ProvincesCreateUpdateHeading" jhiTranslate="provisionApp.provinces.home.createOrEditLabel">
+        Create or edit a Provinces
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.provinces.code" for="field_code">Code</label>
+          <input
+            type="text"
+            class="form-control"
+            name="code"
+            id="field_code"
+            data-cy="code"
+            formControlName="code"
+            [readonly]="editForm.get('code')!.value != null"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.provinces.name" for="field_name">Name</label>
+          <input type="text" class="form-control" name="name" id="field_name" data-cy="name" formControlName="name" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.provinces.nameEn" for="field_nameEn">Name En</label>
+          <input type="text" class="form-control" name="nameEn" id="field_nameEn" data-cy="nameEn" formControlName="nameEn" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.provinces.fullName" for="field_fullName">Full Name</label>
+          <input type="text" class="form-control" name="fullName" id="field_fullName" data-cy="fullName" formControlName="fullName" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.provinces.fullNameEn" for="field_fullNameEn">Full Name En</label>
+          <input
+            type="text"
+            class="form-control"
+            name="fullNameEn"
+            id="field_fullNameEn"
+            data-cy="fullNameEn"
+            formControlName="fullNameEn"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.provinces.codeName" for="field_codeName">Code Name</label>
+          <input type="text" class="form-control" name="codeName" id="field_codeName" data-cy="codeName" formControlName="codeName" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.provinces.administrativeUnitId" for="field_administrativeUnitId"
+            >Administrative Unit Id</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="administrativeUnitId"
+            id="field_administrativeUnitId"
+            data-cy="administrativeUnitId"
+            formControlName="administrativeUnitId"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.provinces.administrativeRegionId" for="field_administrativeRegionId"
+            >Administrative Region Id</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            name="administrativeRegionId"
+            id="field_administrativeRegionId"
+            data-cy="administrativeRegionId"
+            formControlName="administrativeRegionId"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.provinces.administrativeRegions" for="field_administrativeRegions"
+            >Administrative Regions</label
+          >
+          <select
+            class="form-control"
+            id="field_administrativeRegions"
+            data-cy="administrativeRegions"
+            name="administrativeRegions"
+            formControlName="administrativeRegions"
+          >
+            <option [ngValue]="null"></option>
+            <option
+              [ngValue]="
+                administrativeRegionsOption.id === editForm.get('administrativeRegions')!.value?.id
+                  ? editForm.get('administrativeRegions')!.value
+                  : administrativeRegionsOption
+              "
+              *ngFor="let administrativeRegionsOption of administrativeRegionsSharedCollection; trackBy: trackAdministrativeRegionsById"
+            >
+              {{ administrativeRegionsOption.id }}
+            </option>
+          </select>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.provinces.administrativeUnits" for="field_administrativeUnits"
+            >Administrative Units</label
+          >
+          <select
+            class="form-control"
+            id="field_administrativeUnits"
+            data-cy="administrativeUnits"
+            name="administrativeUnits"
+            formControlName="administrativeUnits"
+          >
+            <option [ngValue]="null"></option>
+            <option
+              [ngValue]="
+                administrativeUnitsOption.id === editForm.get('administrativeUnits')!.value?.id
+                  ? editForm.get('administrativeUnits')!.value
+                  : administrativeUnitsOption
+              "
+              *ngFor="let administrativeUnitsOption of administrativeUnitsSharedCollection; trackBy: trackAdministrativeUnitsById"
+            >
+              {{ administrativeUnitsOption.id }}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

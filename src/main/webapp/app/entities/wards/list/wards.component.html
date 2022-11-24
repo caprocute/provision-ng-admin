@@ -1,0 +1,128 @@
+<div>
+  <h2 id="page-heading" data-cy="WardsHeading">
+    <span jhiTranslate="provisionApp.wards.home.title">Wards</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="loadPage()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="provisionApp.wards.home.refreshListLabel">Refresh List</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-wards"
+        [routerLink]="['/wards/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="provisionApp.wards.home.createLabel"> Create a new Wards </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="wards?.length === 0">
+    <span jhiTranslate="provisionApp.wards.home.notFound">No wards found</span>
+  </div>
+
+  <div class="table-responsive" id="entities" *ngIf="wards && wards.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" (sortChange)="loadPage()">
+          <th scope="col" jhiSortBy="code"><span jhiTranslate="provisionApp.wards.code">Code</span> <fa-icon icon="sort"></fa-icon></th>
+          <th scope="col" jhiSortBy="name"><span jhiTranslate="provisionApp.wards.name">Name</span> <fa-icon icon="sort"></fa-icon></th>
+          <th scope="col" jhiSortBy="nameEn">
+            <span jhiTranslate="provisionApp.wards.nameEn">Name En</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="fullName">
+            <span jhiTranslate="provisionApp.wards.fullName">Full Name</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="fullNameEn">
+            <span jhiTranslate="provisionApp.wards.fullNameEn">Full Name En</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="codeName">
+            <span jhiTranslate="provisionApp.wards.codeName">Code Name</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="districtCode">
+            <span jhiTranslate="provisionApp.wards.districtCode">District Code</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="administrativeUnitId">
+            <span jhiTranslate="provisionApp.wards.administrativeUnitId">Administrative Unit Id</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="administrativeRegions.id">
+            <span jhiTranslate="provisionApp.wards.administrativeRegions">Administrative Regions</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="districts.code">
+            <span jhiTranslate="provisionApp.wards.districts">Districts</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let wards of wards; trackBy: trackCode" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/wards', wards.code, 'view']">{{ wards.code }}</a>
+          </td>
+          <td>{{ wards.name }}</td>
+          <td>{{ wards.nameEn }}</td>
+          <td>{{ wards.fullName }}</td>
+          <td>{{ wards.fullNameEn }}</td>
+          <td>{{ wards.codeName }}</td>
+          <td>{{ wards.districtCode }}</td>
+          <td>{{ wards.administrativeUnitId }}</td>
+          <td>
+            <div *ngIf="wards.administrativeRegions">
+              <a [routerLink]="['/administrative-regions', wards.administrativeRegions?.id, 'view']">{{
+                wards.administrativeRegions?.id
+              }}</a>
+            </div>
+          </td>
+          <td>
+            <div *ngIf="wards.districts">
+              <a [routerLink]="['/districts', wards.districts?.code, 'view']">{{ wards.districts?.code }}</a>
+            </div>
+          </td>
+          <td class="text-end">
+            <div class="btn-group">
+              <button type="submit" [routerLink]="['/wards', wards.code, 'view']" class="btn btn-info btn-sm" data-cy="entityDetailsButton">
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button type="submit" [routerLink]="['/wards', wards.code, 'edit']" class="btn btn-primary btn-sm" data-cy="entityEditButton">
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(wards)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="wards && wards.length > 0">
+    <div class="d-flex justify-content-center">
+      <jhi-item-count [params]="{ page: page, totalItems: totalItems, itemsPerPage: itemsPerPage }"></jhi-item-count>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <ngb-pagination
+        [collectionSize]="totalItems"
+        [(page)]="ngbPaginationPage"
+        [pageSize]="itemsPerPage"
+        [maxSize]="5"
+        [rotate]="true"
+        [boundaryLinks]="true"
+        (pageChange)="loadPage($event)"
+      ></ngb-pagination>
+    </div>
+  </div>
+</div>

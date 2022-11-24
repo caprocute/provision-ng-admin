@@ -1,0 +1,32 @@
+{
+  "provisionApp": {
+    "wards": {
+      "home": {
+        "title": "Wards",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Wards",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Wards",
+        "notFound": "No Wards found"
+      },
+      "created": "Một Wards mới được tạo với định danh {{ param }}",
+      "updated": "Một Wards cập nhật với định danh {{ param }}",
+      "deleted": "Một Wards đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Wards {{ id }}?"
+      },
+      "detail": {
+        "title": "Wards"
+      },
+      "code": "Code",
+      "name": "Name",
+      "nameEn": "Name En",
+      "fullName": "Full Name",
+      "fullNameEn": "Full Name En",
+      "codeName": "Code Name",
+      "districtCode": "District Code",
+      "administrativeUnitId": "Administrative Unit Id",
+      "administrativeRegions": "Administrative Regions",
+      "districts": "Districts"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "provisionApp": {
+    "administrativeUnits": {
+      "home": {
+        "title": "Administrative Units",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Administrative Units",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Administrative Units",
+        "notFound": "No Administrative Units found"
+      },
+      "created": "Một Administrative Units mới được tạo với định danh {{ param }}",
+      "updated": "Một Administrative Units cập nhật với định danh {{ param }}",
+      "deleted": "Một Administrative Units đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Administrative Units {{ id }}?"
+      },
+      "detail": {
+        "title": "Administrative Units"
+      },
+      "id": "ID",
+      "fullName": "Full Name",
+      "fullNameEn": "Full Name En",
+      "shortName": "Short Name",
+      "shortNameEn": "Short Name En",
+      "codeName": "Code Name",
+      "codeNameEn": "Code Name En",
+      "provinces": "Provinces",
+      "districts": "Districts"
+    }
+  }
+}

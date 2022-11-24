@@ -1,0 +1,72 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="provinces">
+      <h2 data-cy="provincesDetailsHeading"><span jhiTranslate="provisionApp.provinces.detail.title">Provinces</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="provisionApp.provinces.code">Code</span></dt>
+        <dd>
+          <span>{{ provinces.code }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.provinces.name">Name</span></dt>
+        <dd>
+          <span>{{ provinces.name }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.provinces.nameEn">Name En</span></dt>
+        <dd>
+          <span>{{ provinces.nameEn }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.provinces.fullName">Full Name</span></dt>
+        <dd>
+          <span>{{ provinces.fullName }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.provinces.fullNameEn">Full Name En</span></dt>
+        <dd>
+          <span>{{ provinces.fullNameEn }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.provinces.codeName">Code Name</span></dt>
+        <dd>
+          <span>{{ provinces.codeName }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.provinces.administrativeUnitId">Administrative Unit Id</span></dt>
+        <dd>
+          <span>{{ provinces.administrativeUnitId }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.provinces.administrativeRegionId">Administrative Region Id</span></dt>
+        <dd>
+          <span>{{ provinces.administrativeRegionId }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.provinces.administrativeRegions">Administrative Regions</span></dt>
+        <dd>
+          <div *ngIf="provinces.administrativeRegions">
+            <a [routerLink]="['/administrative-regions', provinces.administrativeRegions?.id, 'view']">{{
+              provinces.administrativeRegions?.id
+            }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.provinces.administrativeUnits">Administrative Units</span></dt>
+        <dd>
+          <div *ngIf="provinces.administrativeUnits">
+            <a [routerLink]="['/administrative-units', provinces.administrativeUnits?.id, 'view']">{{
+              provinces.administrativeUnits?.id
+            }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/provinces', provinces.code, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

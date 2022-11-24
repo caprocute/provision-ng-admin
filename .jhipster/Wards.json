@@ -1,0 +1,64 @@
+{
+  "applications": "*",
+  "changelogDate": "20221124040415",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "wards",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "options": {
+        "id": true
+      }
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nameEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fullName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fullNameEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codeName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "districtCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "administrativeUnitId",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Wards",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "administrativeRegions",
+      "otherEntityRelationshipName": "wards",
+      "relationshipName": "administrativeRegions",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "districts",
+      "otherEntityRelationshipName": "wards",
+      "relationshipName": "districts",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

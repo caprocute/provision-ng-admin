@@ -1,0 +1,60 @@
+
+entity AdministrativeRegions {
+	name String,
+    nameEn String,
+    codeName String,
+    codeNameEn String
+}
+entity AdministrativeUnits {
+	fullName String,
+    fullNameEn String,
+    shortName String,
+    shortNameEn String,
+    codeName String,
+    codeNameEn String
+}
+entity Provinces {
+	@Id code String,
+    name String,
+    nameEn String,
+    fullName String,
+    fullNameEn String,
+    codeName String,
+    administrativeUnitId Long,
+    administrativeRegionId Long
+}
+entity Districts {
+	@Id code String,
+    name String,
+    nameEn String,
+    fullName String,
+    fullNameEn String,
+    codeName String,
+    provinceCode String,
+    administrativeUnitId Long,
+}
+entity Wards {
+	@Id code String,
+    name String,
+    nameEn String,
+    fullName String,
+    fullNameEn String,
+    codeName String,
+    districtCode String,
+    administrativeUnitId Long,
+}
+
+relationship OneToMany {
+	AdministrativeRegions to Provinces,
+	AdministrativeUnits to Provinces,
+    Provinces to Districts,
+	AdministrativeUnits to Districts,
+    AdministrativeRegions to Wards,
+	Districts to Wards
+
+}
+
+dto * with mapstruct
+service * with serviceImpl
+paginate * with pagination
+

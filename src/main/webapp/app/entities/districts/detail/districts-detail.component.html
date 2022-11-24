@@ -1,0 +1,70 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="districts">
+      <h2 data-cy="districtsDetailsHeading"><span jhiTranslate="provisionApp.districts.detail.title">Districts</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="provisionApp.districts.code">Code</span></dt>
+        <dd>
+          <span>{{ districts.code }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.districts.name">Name</span></dt>
+        <dd>
+          <span>{{ districts.name }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.districts.nameEn">Name En</span></dt>
+        <dd>
+          <span>{{ districts.nameEn }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.districts.fullName">Full Name</span></dt>
+        <dd>
+          <span>{{ districts.fullName }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.districts.fullNameEn">Full Name En</span></dt>
+        <dd>
+          <span>{{ districts.fullNameEn }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.districts.codeName">Code Name</span></dt>
+        <dd>
+          <span>{{ districts.codeName }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.districts.provinceCode">Province Code</span></dt>
+        <dd>
+          <span>{{ districts.provinceCode }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.districts.administrativeUnitId">Administrative Unit Id</span></dt>
+        <dd>
+          <span>{{ districts.administrativeUnitId }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.districts.provinces">Provinces</span></dt>
+        <dd>
+          <div *ngIf="districts.provinces">
+            <a [routerLink]="['/provinces', districts.provinces?.code, 'view']">{{ districts.provinces?.code }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.districts.administrativeUnits">Administrative Units</span></dt>
+        <dd>
+          <div *ngIf="districts.administrativeUnits">
+            <a [routerLink]="['/administrative-units', districts.administrativeUnits?.id, 'view']">{{
+              districts.administrativeUnits?.id
+            }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/districts', districts.code, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

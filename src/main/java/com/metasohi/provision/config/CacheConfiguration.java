@@ -81,6 +81,17 @@ public class CacheConfiguration {
             createCache(cm, com.metasohi.provision.domain.User.class.getName(), jcacheConfiguration);
             createCache(cm, com.metasohi.provision.domain.Authority.class.getName(), jcacheConfiguration);
             createCache(cm, com.metasohi.provision.domain.User.class.getName() + ".authorities", jcacheConfiguration);
+            createCache(cm, com.metasohi.provision.domain.AdministrativeRegions.class.getName(), jcacheConfiguration);
+            createCache(cm, com.metasohi.provision.domain.AdministrativeRegions.class.getName() + ".provinces", jcacheConfiguration);
+            createCache(cm, com.metasohi.provision.domain.AdministrativeRegions.class.getName() + ".wards", jcacheConfiguration);
+            createCache(cm, com.metasohi.provision.domain.AdministrativeUnits.class.getName(), jcacheConfiguration);
+            createCache(cm, com.metasohi.provision.domain.AdministrativeUnits.class.getName() + ".provinces", jcacheConfiguration);
+            createCache(cm, com.metasohi.provision.domain.AdministrativeUnits.class.getName() + ".districts", jcacheConfiguration);
+            createCache(cm, com.metasohi.provision.domain.Provinces.class.getName(), jcacheConfiguration);
+            createCache(cm, com.metasohi.provision.domain.Provinces.class.getName() + ".districts", jcacheConfiguration);
+            createCache(cm, com.metasohi.provision.domain.Districts.class.getName(), jcacheConfiguration);
+            createCache(cm, com.metasohi.provision.domain.Districts.class.getName() + ".wards", jcacheConfiguration);
+            createCache(cm, com.metasohi.provision.domain.Wards.class.getName(), jcacheConfiguration);
             // jhipster-needle-redis-add-entry
         };
     }

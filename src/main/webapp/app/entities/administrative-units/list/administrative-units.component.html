@@ -1,0 +1,118 @@
+<div>
+  <h2 id="page-heading" data-cy="AdministrativeUnitsHeading">
+    <span jhiTranslate="provisionApp.administrativeUnits.home.title">Administrative Units</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="loadPage()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="provisionApp.administrativeUnits.home.refreshListLabel">Refresh List</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-administrative-units"
+        [routerLink]="['/administrative-units/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="provisionApp.administrativeUnits.home.createLabel"> Create a new Administrative Units </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="administrativeUnits?.length === 0">
+    <span jhiTranslate="provisionApp.administrativeUnits.home.notFound">No administrativeUnits found</span>
+  </div>
+
+  <div class="table-responsive" id="entities" *ngIf="administrativeUnits && administrativeUnits.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" (sortChange)="loadPage()">
+          <th scope="col" jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
+          <th scope="col" jhiSortBy="fullName">
+            <span jhiTranslate="provisionApp.administrativeUnits.fullName">Full Name</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="fullNameEn">
+            <span jhiTranslate="provisionApp.administrativeUnits.fullNameEn">Full Name En</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="shortName">
+            <span jhiTranslate="provisionApp.administrativeUnits.shortName">Short Name</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="shortNameEn">
+            <span jhiTranslate="provisionApp.administrativeUnits.shortNameEn">Short Name En</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="codeName">
+            <span jhiTranslate="provisionApp.administrativeUnits.codeName">Code Name</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="codeNameEn">
+            <span jhiTranslate="provisionApp.administrativeUnits.codeNameEn">Code Name En</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let administrativeUnits of administrativeUnits; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/administrative-units', administrativeUnits.id, 'view']">{{ administrativeUnits.id }}</a>
+          </td>
+          <td>{{ administrativeUnits.fullName }}</td>
+          <td>{{ administrativeUnits.fullNameEn }}</td>
+          <td>{{ administrativeUnits.shortName }}</td>
+          <td>{{ administrativeUnits.shortNameEn }}</td>
+          <td>{{ administrativeUnits.codeName }}</td>
+          <td>{{ administrativeUnits.codeNameEn }}</td>
+          <td class="text-end">
+            <div class="btn-group">
+              <button
+                type="submit"
+                [routerLink]="['/administrative-units', administrativeUnits.id, 'view']"
+                class="btn btn-info btn-sm"
+                data-cy="entityDetailsButton"
+              >
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button
+                type="submit"
+                [routerLink]="['/administrative-units', administrativeUnits.id, 'edit']"
+                class="btn btn-primary btn-sm"
+                data-cy="entityEditButton"
+              >
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(administrativeUnits)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="administrativeUnits && administrativeUnits.length > 0">
+    <div class="d-flex justify-content-center">
+      <jhi-item-count [params]="{ page: page, totalItems: totalItems, itemsPerPage: itemsPerPage }"></jhi-item-count>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <ngb-pagination
+        [collectionSize]="totalItems"
+        [(page)]="ngbPaginationPage"
+        [pageSize]="itemsPerPage"
+        [maxSize]="5"
+        [rotate]="true"
+        [boundaryLinks]="true"
+        (pageChange)="loadPage($event)"
+      ></ngb-pagination>
+    </div>
+  </div>
+</div>

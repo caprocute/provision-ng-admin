@@ -1,0 +1,33 @@
+{
+  "provisionApp": {
+    "districts": {
+      "home": {
+        "title": "Districts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Districts",
+        "createOrEditLabel": "Create or edit a Districts",
+        "notFound": "No Districts found"
+      },
+      "created": "A new Districts is created with identifier {{ param }}",
+      "updated": "A Districts is updated with identifier {{ param }}",
+      "deleted": "A Districts is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Districts {{ id }}?"
+      },
+      "detail": {
+        "title": "Districts"
+      },
+      "code": "Code",
+      "name": "Name",
+      "nameEn": "Name En",
+      "fullName": "Full Name",
+      "fullNameEn": "Full Name En",
+      "codeName": "Code Name",
+      "provinceCode": "Province Code",
+      "administrativeUnitId": "Administrative Unit Id",
+      "wards": "Wards",
+      "provinces": "Provinces",
+      "administrativeUnits": "Administrative Units"
+    }
+  }
+}

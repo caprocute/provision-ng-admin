@@ -1,0 +1,70 @@
+{
+  "applications": "*",
+  "changelogDate": "20221124040414",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "districts",
+  "fields": [
+    {
+      "fieldName": "code",
+      "fieldType": "String",
+      "options": {
+        "id": true
+      }
+    },
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nameEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fullName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fullNameEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codeName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "provinceCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "administrativeUnitId",
+      "fieldType": "Long"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "Districts",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "wards",
+      "otherEntityRelationshipName": "districts",
+      "relationshipName": "wards",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "provinces",
+      "otherEntityRelationshipName": "districts",
+      "relationshipName": "provinces",
+      "relationshipType": "many-to-one"
+    },
+    {
+      "otherEntityName": "administrativeUnits",
+      "otherEntityRelationshipName": "districts",
+      "relationshipName": "administrativeUnits",
+      "relationshipType": "many-to-one"
+    }
+  ],
+  "service": "serviceImpl"
+}

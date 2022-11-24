@@ -1,0 +1,31 @@
+{
+  "provisionApp": {
+    "administrativeUnits": {
+      "home": {
+        "title": "Administrative Units",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Administrative Units",
+        "createOrEditLabel": "Create or edit a Administrative Units",
+        "notFound": "No Administrative Units found"
+      },
+      "created": "A new Administrative Units is created with identifier {{ param }}",
+      "updated": "A Administrative Units is updated with identifier {{ param }}",
+      "deleted": "A Administrative Units is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Administrative Units {{ id }}?"
+      },
+      "detail": {
+        "title": "Administrative Units"
+      },
+      "id": "ID",
+      "fullName": "Full Name",
+      "fullNameEn": "Full Name En",
+      "shortName": "Short Name",
+      "shortNameEn": "Short Name En",
+      "codeName": "Code Name",
+      "codeNameEn": "Code Name En",
+      "provinces": "Provinces",
+      "districts": "Districts"
+    }
+  }
+}

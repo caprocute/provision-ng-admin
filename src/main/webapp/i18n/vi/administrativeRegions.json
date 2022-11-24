@@ -1,0 +1,29 @@
+{
+  "provisionApp": {
+    "administrativeRegions": {
+      "home": {
+        "title": "Administrative Regions",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Administrative Regions",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Administrative Regions",
+        "notFound": "No Administrative Regions found"
+      },
+      "created": "Một Administrative Regions mới được tạo với định danh {{ param }}",
+      "updated": "Một Administrative Regions cập nhật với định danh {{ param }}",
+      "deleted": "Một Administrative Regions đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Administrative Regions {{ id }}?"
+      },
+      "detail": {
+        "title": "Administrative Regions"
+      },
+      "id": "ID",
+      "name": "Name",
+      "nameEn": "Name En",
+      "codeName": "Code Name",
+      "codeNameEn": "Code Name En",
+      "provinces": "Provinces",
+      "wards": "Wards"
+    }
+  }
+}

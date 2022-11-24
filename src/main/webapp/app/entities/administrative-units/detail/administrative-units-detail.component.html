@@ -1,0 +1,54 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="administrativeUnits">
+      <h2 data-cy="administrativeUnitsDetailsHeading">
+        <span jhiTranslate="provisionApp.administrativeUnits.detail.title">Administrative Units</span>
+      </h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ administrativeUnits.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.administrativeUnits.fullName">Full Name</span></dt>
+        <dd>
+          <span>{{ administrativeUnits.fullName }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.administrativeUnits.fullNameEn">Full Name En</span></dt>
+        <dd>
+          <span>{{ administrativeUnits.fullNameEn }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.administrativeUnits.shortName">Short Name</span></dt>
+        <dd>
+          <span>{{ administrativeUnits.shortName }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.administrativeUnits.shortNameEn">Short Name En</span></dt>
+        <dd>
+          <span>{{ administrativeUnits.shortNameEn }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.administrativeUnits.codeName">Code Name</span></dt>
+        <dd>
+          <span>{{ administrativeUnits.codeName }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.administrativeUnits.codeNameEn">Code Name En</span></dt>
+        <dd>
+          <span>{{ administrativeUnits.codeNameEn }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/administrative-units', administrativeUnits.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

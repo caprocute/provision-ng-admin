@@ -1,0 +1,29 @@
+{
+  "provisionApp": {
+    "administrativeRegions": {
+      "home": {
+        "title": "Administrative Regions",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Administrative Regions",
+        "createOrEditLabel": "Create or edit a Administrative Regions",
+        "notFound": "No Administrative Regions found"
+      },
+      "created": "A new Administrative Regions is created with identifier {{ param }}",
+      "updated": "A Administrative Regions is updated with identifier {{ param }}",
+      "deleted": "A Administrative Regions is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Administrative Regions {{ id }}?"
+      },
+      "detail": {
+        "title": "Administrative Regions"
+      },
+      "id": "ID",
+      "name": "Name",
+      "nameEn": "Name En",
+      "codeName": "Code Name",
+      "codeNameEn": "Code Name En",
+      "provinces": "Provinces",
+      "wards": "Wards"
+    }
+  }
+}

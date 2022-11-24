@@ -1,0 +1,33 @@
+{
+  "provisionApp": {
+    "districts": {
+      "home": {
+        "title": "Districts",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Districts",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Districts",
+        "notFound": "No Districts found"
+      },
+      "created": "Một Districts mới được tạo với định danh {{ param }}",
+      "updated": "Một Districts cập nhật với định danh {{ param }}",
+      "deleted": "Một Districts đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Districts {{ id }}?"
+      },
+      "detail": {
+        "title": "Districts"
+      },
+      "code": "Code",
+      "name": "Name",
+      "nameEn": "Name En",
+      "fullName": "Full Name",
+      "fullNameEn": "Full Name En",
+      "codeName": "Code Name",
+      "provinceCode": "Province Code",
+      "administrativeUnitId": "Administrative Unit Id",
+      "wards": "Wards",
+      "provinces": "Provinces",
+      "administrativeUnits": "Administrative Units"
+    }
+  }
+}

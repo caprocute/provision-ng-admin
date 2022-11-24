@@ -1,0 +1,45 @@
+{
+  "applications": "*",
+  "changelogDate": "20221124040411",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "administrative_regions",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "nameEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codeName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codeNameEn",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "AdministrativeRegions",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "provinces",
+      "otherEntityRelationshipName": "administrativeRegions",
+      "relationshipName": "provinces",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "wards",
+      "otherEntityRelationshipName": "administrativeRegions",
+      "relationshipName": "wards",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

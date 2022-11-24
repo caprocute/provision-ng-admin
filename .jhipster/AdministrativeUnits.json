@@ -1,0 +1,53 @@
+{
+  "applications": "*",
+  "changelogDate": "20221124040412",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "administrative_units",
+  "fields": [
+    {
+      "fieldName": "fullName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fullNameEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "shortName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "shortNameEn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codeName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "codeNameEn",
+      "fieldType": "String"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "AdministrativeUnits",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [
+    {
+      "otherEntityName": "provinces",
+      "otherEntityRelationshipName": "administrativeUnits",
+      "relationshipName": "provinces",
+      "relationshipType": "one-to-many"
+    },
+    {
+      "otherEntityName": "districts",
+      "otherEntityRelationshipName": "administrativeUnits",
+      "relationshipName": "districts",
+      "relationshipType": "one-to-many"
+    }
+  ],
+  "service": "serviceImpl"
+}

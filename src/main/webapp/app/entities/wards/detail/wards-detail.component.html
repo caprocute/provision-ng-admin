@@ -1,0 +1,68 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="wards">
+      <h2 data-cy="wardsDetailsHeading"><span jhiTranslate="provisionApp.wards.detail.title">Wards</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="provisionApp.wards.code">Code</span></dt>
+        <dd>
+          <span>{{ wards.code }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.wards.name">Name</span></dt>
+        <dd>
+          <span>{{ wards.name }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.wards.nameEn">Name En</span></dt>
+        <dd>
+          <span>{{ wards.nameEn }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.wards.fullName">Full Name</span></dt>
+        <dd>
+          <span>{{ wards.fullName }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.wards.fullNameEn">Full Name En</span></dt>
+        <dd>
+          <span>{{ wards.fullNameEn }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.wards.codeName">Code Name</span></dt>
+        <dd>
+          <span>{{ wards.codeName }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.wards.districtCode">District Code</span></dt>
+        <dd>
+          <span>{{ wards.districtCode }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.wards.administrativeUnitId">Administrative Unit Id</span></dt>
+        <dd>
+          <span>{{ wards.administrativeUnitId }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.wards.administrativeRegions">Administrative Regions</span></dt>
+        <dd>
+          <div *ngIf="wards.administrativeRegions">
+            <a [routerLink]="['/administrative-regions', wards.administrativeRegions?.id, 'view']">{{ wards.administrativeRegions?.id }}</a>
+          </div>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.wards.districts">Districts</span></dt>
+        <dd>
+          <div *ngIf="wards.districts">
+            <a [routerLink]="['/districts', wards.districts?.code, 'view']">{{ wards.districts?.code }}</a>
+          </div>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/wards', wards.code, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

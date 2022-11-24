@@ -1,0 +1,32 @@
+{
+  "provisionApp": {
+    "wards": {
+      "home": {
+        "title": "Wards",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Wards",
+        "createOrEditLabel": "Create or edit a Wards",
+        "notFound": "No Wards found"
+      },
+      "created": "A new Wards is created with identifier {{ param }}",
+      "updated": "A Wards is updated with identifier {{ param }}",
+      "deleted": "A Wards is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Wards {{ id }}?"
+      },
+      "detail": {
+        "title": "Wards"
+      },
+      "code": "Code",
+      "name": "Name",
+      "nameEn": "Name En",
+      "fullName": "Full Name",
+      "fullNameEn": "Full Name En",
+      "codeName": "Code Name",
+      "districtCode": "District Code",
+      "administrativeUnitId": "Administrative Unit Id",
+      "administrativeRegions": "Administrative Regions",
+      "districts": "Districts"
+    }
+  }
+}

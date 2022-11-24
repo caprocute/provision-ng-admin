@@ -1,0 +1,65 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2
+        id="jhi-administrative-regions-heading"
+        data-cy="AdministrativeRegionsCreateUpdateHeading"
+        jhiTranslate="provisionApp.administrativeRegions.home.createOrEditLabel"
+      >
+        Create or edit a Administrative Regions
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.administrativeRegions.name" for="field_name">Name</label>
+          <input type="text" class="form-control" name="name" id="field_name" data-cy="name" formControlName="name" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.administrativeRegions.nameEn" for="field_nameEn">Name En</label>
+          <input type="text" class="form-control" name="nameEn" id="field_nameEn" data-cy="nameEn" formControlName="nameEn" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.administrativeRegions.codeName" for="field_codeName">Code Name</label>
+          <input type="text" class="form-control" name="codeName" id="field_codeName" data-cy="codeName" formControlName="codeName" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.administrativeRegions.codeNameEn" for="field_codeNameEn">Code Name En</label>
+          <input
+            type="text"
+            class="form-control"
+            name="codeNameEn"
+            id="field_codeNameEn"
+            data-cy="codeNameEn"
+            formControlName="codeNameEn"
+          />
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
