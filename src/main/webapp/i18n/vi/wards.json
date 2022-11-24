@@ -2,7 +2,7 @@
   "provisionApp": {
     "wards": {
       "home": {
-        "title": "Wards",
+        "title": "Quản lý danh mục Xã phường",
         "refreshListLabel": "Refresh list",
         "createLabel": "Thêm mới một Wards",
         "createOrEditLabel": "Thêm mới hoặc cập nhật Wards",
