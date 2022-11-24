@@ -29,6 +29,26 @@ import { RouterModule } from '@angular/router';
         data: { pageTitle: 'provisionApp.wards.home.title' },
         loadChildren: () => import('./wards/wards.module').then(m => m.WardsModule),
       },
+      {
+        path: 'sys-area',
+        data: { pageTitle: 'provisionApp.sysArea.home.title' },
+        loadChildren: () => import('./sys-area/sys-area.module').then(m => m.SysAreaModule),
+      },
+      {
+        path: 'sys-camera',
+        data: { pageTitle: 'provisionApp.sysCamera.home.title' },
+        loadChildren: () => import('./sys-camera/sys-camera.module').then(m => m.SysCameraModule),
+      },
+      {
+        path: 'sys-organization',
+        data: { pageTitle: 'provisionApp.sysOrganization.home.title' },
+        loadChildren: () => import('./sys-organization/sys-organization.module').then(m => m.SysOrganizationModule),
+      },
+      {
+        path: 'sys-organization-area',
+        data: { pageTitle: 'provisionApp.sysOrganizationArea.home.title' },
+        loadChildren: () => import('./sys-organization-area/sys-organization-area.module').then(m => m.SysOrganizationAreaModule),
+      },
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ]),
   ],

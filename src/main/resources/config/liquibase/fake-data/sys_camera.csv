@@ -1,0 +1,9 @@
+id;cam_code;cam_name;area_id;branch;origin;description;is_active;status;location_lat;location_lan;url_sftp;url_live_stream;created_by;created_date;last_modified_by;last_modified_date
+1;CAM_0001;Camera hướng Nguyễn Trãi - Trường Chinh;1;Viettel;VietNam;Camera 1;true;false;21.003155928235298;105.82011264828361;https://www.google.com/;https://www.google.com/;1;2022-11-24T06:39:21;1;2022-11-23T11:32:51
+2;CAM_0002;Camera hướng Nguyễn Trãi - Láng;1;Viettel;VietNam;Camera 1;true;false;21.003155928235298;105.82011264828361;https://www.google.com/;https://www.google.com/;1;2022-11-24T06:39:21;1;2022-11-23T11:32:51
+3;CAM_0003;Camera hướng Trường Chinh - Láng ;1;Viettel;VietNam;Camera 1;true;false;21.003155928235298;105.82011264828361;https://www.google.com/;https://www.google.com/;1;2022-11-24T06:39:21;1;2022-11-23T11:32:51
+4;CAM_0004;Camera hướng Láng Hạ - Nguyễn Trãi;1;Viettel;VietNam;Camera 1;true;false;21.003155928235298;105.82011264828361;https://www.google.com/;https://www.google.com/;1;2022-11-24T06:39:21;1;2022-11-23T11:32:51
+5;CAM_0005;Camera Bùng Binh Lê Đức Thọ;2;Viettel;VietNam;Camera 1;true;false;21.003155928235298;105.82011264828361;https://www.google.com/;https://www.google.com/;1;2022-11-24T06:39:21;1;2022-11-23T11:32:51
+6;CAM_0006;Camera Ngã Tư Nguyễn Cơ Thạch;2;Viettel;VietNam;Camera 1;true;false;21.003155928235298;105.82011264828361;https://www.google.com/;https://www.google.com/;1;2022-11-24T06:39:21;1;2022-11-23T11:32:51
+7;CAM_0007;Camera Sân bóng Vận động viên cấp cao;2;Viettel;VietNam;Camera 1;true;false;21.003155928235298;105.82011264828361;https://www.google.com/;https://www.google.com/;1;2022-11-24T06:39:21;1;2022-11-23T11:32:51
+8;CAM_0008;Camera toàn cảnh tòa nhà VTS;2;Viettel;VietNam;Camera 1;true;false;21.003155928235298;105.82011264828361;https://www.google.com/;https://www.google.com/;1;2022-11-24T06:39:21;1;2022-11-23T11:32:51

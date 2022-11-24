@@ -1,0 +1,66 @@
+
+entity SysArea {
+	areaCode String,
+    areaName String,
+    provinceCode String,
+    districtCode String,
+    wardCode String,
+    description String,
+    isActive Boolean,
+    status Boolean,
+    locationLat Float,
+    locationLan Float,
+    createdBy String,
+    createdDate Instant,
+    lastModifiedBy String,
+    lastModifiedDate Instant
+}
+
+entity SysCamera {
+	camCode String,
+    camName String,
+    areaId Long,
+    branch String,
+    origin String,
+    description String,
+    isActive Boolean,
+    status Boolean,
+    locationLat Float,
+    locationLan Float,
+    urlSFTP String,
+    urlLiveStream String,
+    createdBy String,
+    createdDate Instant,
+    lastModifiedBy String,
+    lastModifiedDate Instant
+}
+
+entity SysOrganization {
+	parentId Long,
+    sysOrgCode String,
+    sysOrgName String,
+    sysOrgPath String,
+    sysOrgFullPath String,
+    description String,
+    address String,
+    type Long,
+    tenantId Long,
+    sysOrgType Long,
+    isActive Boolean,
+    status Boolean,
+    createdBy String,
+    createdDate Instant,
+    lastModifiedBy String,
+    lastModifiedDate Instant
+}
+entity SysOrganizationArea {
+	orgId Long,
+    areaId String,
+    isActive Boolean,
+    createdBy String,
+    createdDate Instant,
+    lastModifiedBy String,
+    lastModifiedDate Instant
+}
+
+use serviceClass, serviceImpl, pagination, mapstruct for * except SysOrganizationArea

@@ -92,6 +92,10 @@ public class CacheConfiguration {
             createCache(cm, com.metasohi.provision.domain.Districts.class.getName(), jcacheConfiguration);
             createCache(cm, com.metasohi.provision.domain.Districts.class.getName() + ".wards", jcacheConfiguration);
             createCache(cm, com.metasohi.provision.domain.Wards.class.getName(), jcacheConfiguration);
+            createCache(cm, com.metasohi.provision.domain.SysArea.class.getName(), jcacheConfiguration);
+            createCache(cm, com.metasohi.provision.domain.SysCamera.class.getName(), jcacheConfiguration);
+            createCache(cm, com.metasohi.provision.domain.SysOrganization.class.getName(), jcacheConfiguration);
+            createCache(cm, com.metasohi.provision.domain.SysOrganizationArea.class.getName(), jcacheConfiguration);
             // jhipster-needle-redis-add-entry
         };
     }

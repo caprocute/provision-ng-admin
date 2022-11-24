@@ -1,0 +1,2 @@
+id;parent_id;sys_org_code;sys_org_name;sys_org_path;sys_org_full_path;description;address;type;tenant_id;sys_org_type;is_active;status;created_by;created_date;last_modified_by;last_modified_date
+1;;VT_COMPANY;Tập đoàn Công nghiệp viễn thông Quân đội;/viettel;root/viettel;Tập đoàn Công nghiệp viễn thông Quân đội;Số 1 Trần Hữu Dực;46459;33431;63226;false;true;deploy Indonesia Manager;2022-11-23T22:23:26;program bypass Berkshire;2022-11-24T07:02:37

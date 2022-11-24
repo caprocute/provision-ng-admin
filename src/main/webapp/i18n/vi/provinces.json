@@ -2,32 +2,32 @@
   "provisionApp": {
     "provinces": {
       "home": {
-        "title": "Quản lý danh mục Tỉnh/Thành phố",
-        "refreshListLabel": "Cập nhật",
-        "createLabel": "Thêm mới một Tỉnh/Thành phố",
-        "createOrEditLabel": "Thêm mới hoặc cập nhật Tỉnh/Thành phố",
-        "notFound": "Không tìm thấy kết quả phù hợp"
+        "title": "Provinces",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Provinces",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Provinces",
+        "notFound": "No Provinces found"
       },
-      "created": "Tạo thành công Tỉnh/Thành phố với định danh {{ param }}",
-      "updated": "Cập nhật thành công Tỉnh/Thành phố với định danh {{ param }}",
-      "deleted": "Xóa thành công Tỉnh/Thành phố với định danh {{ param }}",
+      "created": "Một Provinces mới được tạo với định danh {{ param }}",
+      "updated": "Một Provinces cập nhật với định danh {{ param }}",
+      "deleted": "Một Provinces đã xóa với định danh {{ param }}",
       "delete": {
-        "question": "Bạn có chắc là muốn xóa tỉnh/Thành phố với định danh {{ id }}?"
+        "question": "Bạn có chắc là muốn xóa Provinces {{ id }}?"
       },
       "detail": {
-        "title": "Quản lý danh mục Tỉnh/Thành phố"
+        "title": "Provinces"
       },
-      "code": "Mã code",
-      "name": "Tên",
-      "nameEn": "Tên tiếng Anh",
-      "fullName": "Tên đầy đủ",
-      "fullNameEn": "Tên đầy đủ tiếng Anh",
+      "code": "Code",
+      "name": "Name",
+      "nameEn": "Name En",
+      "fullName": "Full Name",
+      "fullNameEn": "Full Name En",
       "codeName": "Code Name",
-      "administrativeUnitId": "Định danh Vùng kinh tế",
-      "administrativeRegionId": "Định danh Khu vực hành chính",
-      "districts": "Tỉnh/Thành phố",
-      "administrativeRegions": "Vùng kinh tế",
-      "administrativeUnits": "Khu vực hành chính"
+      "administrativeUnitId": "Administrative Unit Id",
+      "administrativeRegionId": "Administrative Region Id",
+      "districts": "Districts",
+      "administrativeRegions": "Administrative Regions",
+      "administrativeUnits": "Administrative Units"
     }
   }
 }

@@ -1,0 +1,84 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="sysArea">
+      <h2 data-cy="sysAreaDetailsHeading"><span jhiTranslate="provisionApp.sysArea.detail.title">Sys Area</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ sysArea.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysArea.areaCode">Area Code</span></dt>
+        <dd>
+          <span>{{ sysArea.areaCode }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysArea.areaName">Area Name</span></dt>
+        <dd>
+          <span>{{ sysArea.areaName }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysArea.provinceCode">Province Code</span></dt>
+        <dd>
+          <span>{{ sysArea.provinceCode }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysArea.districtCode">District Code</span></dt>
+        <dd>
+          <span>{{ sysArea.districtCode }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysArea.wardCode">Ward Code</span></dt>
+        <dd>
+          <span>{{ sysArea.wardCode }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysArea.description">Description</span></dt>
+        <dd>
+          <span>{{ sysArea.description }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysArea.isActive">Is Active</span></dt>
+        <dd>
+          <span>{{ sysArea.isActive }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysArea.status">Status</span></dt>
+        <dd>
+          <span>{{ sysArea.status }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysArea.locationLat">Location Lat</span></dt>
+        <dd>
+          <span>{{ sysArea.locationLat }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysArea.locationLan">Location Lan</span></dt>
+        <dd>
+          <span>{{ sysArea.locationLan }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysArea.createdBy">Created By</span></dt>
+        <dd>
+          <span>{{ sysArea.createdBy }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysArea.createdDate">Created Date</span></dt>
+        <dd>
+          <span>{{ sysArea.createdDate | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysArea.lastModifiedBy">Last Modified By</span></dt>
+        <dd>
+          <span>{{ sysArea.lastModifiedBy }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysArea.lastModifiedDate">Last Modified Date</span></dt>
+        <dd>
+          <span>{{ sysArea.lastModifiedDate | formatMediumDatetime }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/sys-area', sysArea.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

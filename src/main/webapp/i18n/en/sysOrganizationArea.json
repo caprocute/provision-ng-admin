@@ -1,0 +1,30 @@
+{
+  "provisionApp": {
+    "sysOrganizationArea": {
+      "home": {
+        "title": "Sys Organization Areas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Sys Organization Area",
+        "createOrEditLabel": "Create or edit a Sys Organization Area",
+        "notFound": "No Sys Organization Areas found"
+      },
+      "created": "A new Sys Organization Area is created with identifier {{ param }}",
+      "updated": "A Sys Organization Area is updated with identifier {{ param }}",
+      "deleted": "A Sys Organization Area is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Sys Organization Area {{ id }}?"
+      },
+      "detail": {
+        "title": "Sys Organization Area"
+      },
+      "id": "ID",
+      "orgId": "Org Id",
+      "areaId": "Area Id",
+      "isActive": "Is Active",
+      "createdBy": "Created By",
+      "createdDate": "Created Date",
+      "lastModifiedBy": "Last Modified By",
+      "lastModifiedDate": "Last Modified Date"
+    }
+  }
+}

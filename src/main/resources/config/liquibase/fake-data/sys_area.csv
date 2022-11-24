@@ -1,0 +1,4 @@
+id;area_code;area_name;province_code;district_code;ward_code;description;is_active;status;location_lat;location_lan;created_by;created_date;last_modified_by;last_modified_date
+1;AREA_OO1;Ngã tư sở;01;009;00355;Khu vực ngã tư sở;true;true;21.003155928235298;105.82011264828361;1;2022-11-23T08:57:23;1;2022-11-23T22:24:22
+2;AREA_OO2;Ga Hà Nội;01;009;00355;Cụm camera Khu vực ga Hà Nội;true;true;21.003155928235298;105.82011264828361;1;2022-11-23T08:57:23;1;2022-11-23T22:24:22
+

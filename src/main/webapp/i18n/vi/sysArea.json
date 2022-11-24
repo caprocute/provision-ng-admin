@@ -1,0 +1,37 @@
+{
+  "provisionApp": {
+    "sysArea": {
+      "home": {
+        "title": "Sys Areas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Thêm mới một Sys Area",
+        "createOrEditLabel": "Thêm mới hoặc cập nhật Sys Area",
+        "notFound": "No Sys Areas found"
+      },
+      "created": "Một Sys Area mới được tạo với định danh {{ param }}",
+      "updated": "Một Sys Area cập nhật với định danh {{ param }}",
+      "deleted": "Một Sys Area đã xóa với định danh {{ param }}",
+      "delete": {
+        "question": "Bạn có chắc là muốn xóa Sys Area {{ id }}?"
+      },
+      "detail": {
+        "title": "Sys Area"
+      },
+      "id": "ID",
+      "areaCode": "Area Code",
+      "areaName": "Area Name",
+      "provinceCode": "Province Code",
+      "districtCode": "District Code",
+      "wardCode": "Ward Code",
+      "description": "Description",
+      "isActive": "Is Active",
+      "status": "Status",
+      "locationLat": "Location Lat",
+      "locationLan": "Location Lan",
+      "createdBy": "Created By",
+      "createdDate": "Created Date",
+      "lastModifiedBy": "Last Modified By",
+      "lastModifiedDate": "Last Modified Date"
+    }
+  }
+}

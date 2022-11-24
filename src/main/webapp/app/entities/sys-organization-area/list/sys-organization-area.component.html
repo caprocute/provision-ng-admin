@@ -1,0 +1,90 @@
+<div>
+  <h2 id="page-heading" data-cy="SysOrganizationAreaHeading">
+    <span jhiTranslate="provisionApp.sysOrganizationArea.home.title">Sys Organization Areas</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="loadAll()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="provisionApp.sysOrganizationArea.home.refreshListLabel">Refresh List</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-sys-organization-area"
+        [routerLink]="['/sys-organization-area/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="provisionApp.sysOrganizationArea.home.createLabel"> Create a new Sys Organization Area </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="sysOrganizationAreas?.length === 0">
+    <span jhiTranslate="provisionApp.sysOrganizationArea.home.notFound">No sysOrganizationAreas found</span>
+  </div>
+
+  <div class="table-responsive" id="entities" *ngIf="sysOrganizationAreas && sysOrganizationAreas.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr>
+          <th scope="col"><span jhiTranslate="global.field.id">ID</span></th>
+          <th scope="col"><span jhiTranslate="provisionApp.sysOrganizationArea.orgId">Org Id</span></th>
+          <th scope="col"><span jhiTranslate="provisionApp.sysOrganizationArea.areaId">Area Id</span></th>
+          <th scope="col"><span jhiTranslate="provisionApp.sysOrganizationArea.isActive">Is Active</span></th>
+          <th scope="col"><span jhiTranslate="provisionApp.sysOrganizationArea.createdBy">Created By</span></th>
+          <th scope="col"><span jhiTranslate="provisionApp.sysOrganizationArea.createdDate">Created Date</span></th>
+          <th scope="col"><span jhiTranslate="provisionApp.sysOrganizationArea.lastModifiedBy">Last Modified By</span></th>
+          <th scope="col"><span jhiTranslate="provisionApp.sysOrganizationArea.lastModifiedDate">Last Modified Date</span></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let sysOrganizationArea of sysOrganizationAreas; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/sys-organization-area', sysOrganizationArea.id, 'view']">{{ sysOrganizationArea.id }}</a>
+          </td>
+          <td>{{ sysOrganizationArea.orgId }}</td>
+          <td>{{ sysOrganizationArea.areaId }}</td>
+          <td>{{ sysOrganizationArea.isActive }}</td>
+          <td>{{ sysOrganizationArea.createdBy }}</td>
+          <td>{{ sysOrganizationArea.createdDate | formatMediumDatetime }}</td>
+          <td>{{ sysOrganizationArea.lastModifiedBy }}</td>
+          <td>{{ sysOrganizationArea.lastModifiedDate | formatMediumDatetime }}</td>
+          <td class="text-end">
+            <div class="btn-group">
+              <button
+                type="submit"
+                [routerLink]="['/sys-organization-area', sysOrganizationArea.id, 'view']"
+                class="btn btn-info btn-sm"
+                data-cy="entityDetailsButton"
+              >
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button
+                type="submit"
+                [routerLink]="['/sys-organization-area', sysOrganizationArea.id, 'edit']"
+                class="btn btn-primary btn-sm"
+                data-cy="entityEditButton"
+              >
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(sysOrganizationArea)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

@@ -1,0 +1,92 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="sysCamera">
+      <h2 data-cy="sysCameraDetailsHeading"><span jhiTranslate="provisionApp.sysCamera.detail.title">Sys Camera</span></h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ sysCamera.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysCamera.camCode">Cam Code</span></dt>
+        <dd>
+          <span>{{ sysCamera.camCode }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysCamera.camName">Cam Name</span></dt>
+        <dd>
+          <span>{{ sysCamera.camName }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysCamera.areaId">Area Id</span></dt>
+        <dd>
+          <span>{{ sysCamera.areaId }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysCamera.branch">Branch</span></dt>
+        <dd>
+          <span>{{ sysCamera.branch }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysCamera.origin">Origin</span></dt>
+        <dd>
+          <span>{{ sysCamera.origin }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysCamera.description">Description</span></dt>
+        <dd>
+          <span>{{ sysCamera.description }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysCamera.isActive">Is Active</span></dt>
+        <dd>
+          <span>{{ sysCamera.isActive }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysCamera.status">Status</span></dt>
+        <dd>
+          <span>{{ sysCamera.status }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysCamera.locationLat">Location Lat</span></dt>
+        <dd>
+          <span>{{ sysCamera.locationLat }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysCamera.locationLan">Location Lan</span></dt>
+        <dd>
+          <span>{{ sysCamera.locationLan }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysCamera.urlSFTP">Url SFTP</span></dt>
+        <dd>
+          <span>{{ sysCamera.urlSFTP }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysCamera.urlLiveStream">Url Live Stream</span></dt>
+        <dd>
+          <span>{{ sysCamera.urlLiveStream }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysCamera.createdBy">Created By</span></dt>
+        <dd>
+          <span>{{ sysCamera.createdBy }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysCamera.createdDate">Created Date</span></dt>
+        <dd>
+          <span>{{ sysCamera.createdDate | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysCamera.lastModifiedBy">Last Modified By</span></dt>
+        <dd>
+          <span>{{ sysCamera.lastModifiedBy }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysCamera.lastModifiedDate">Last Modified Date</span></dt>
+        <dd>
+          <span>{{ sysCamera.lastModifiedDate | formatMediumDatetime }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/sys-camera', sysCamera.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

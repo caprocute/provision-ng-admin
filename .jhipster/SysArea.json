@@ -1,0 +1,72 @@
+{
+  "applications": "*",
+  "changelogDate": "20221124073843",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "sys_area",
+  "fields": [
+    {
+      "fieldName": "areaCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "areaName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "provinceCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "districtCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "wardCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "locationLat",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "locationLan",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModifiedDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "SysArea",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

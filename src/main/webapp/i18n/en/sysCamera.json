@@ -1,0 +1,39 @@
+{
+  "provisionApp": {
+    "sysCamera": {
+      "home": {
+        "title": "Sys Cameras",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Sys Camera",
+        "createOrEditLabel": "Create or edit a Sys Camera",
+        "notFound": "No Sys Cameras found"
+      },
+      "created": "A new Sys Camera is created with identifier {{ param }}",
+      "updated": "A Sys Camera is updated with identifier {{ param }}",
+      "deleted": "A Sys Camera is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Sys Camera {{ id }}?"
+      },
+      "detail": {
+        "title": "Sys Camera"
+      },
+      "id": "ID",
+      "camCode": "Cam Code",
+      "camName": "Cam Name",
+      "areaId": "Area Id",
+      "branch": "Branch",
+      "origin": "Origin",
+      "description": "Description",
+      "isActive": "Is Active",
+      "status": "Status",
+      "locationLat": "Location Lat",
+      "locationLan": "Location Lan",
+      "urlSFTP": "Url SFTP",
+      "urlLiveStream": "Url Live Stream",
+      "createdBy": "Created By",
+      "createdDate": "Created Date",
+      "lastModifiedBy": "Last Modified By",
+      "lastModifiedDate": "Last Modified Date"
+    }
+  }
+}

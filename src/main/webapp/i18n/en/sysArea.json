@@ -1,0 +1,37 @@
+{
+  "provisionApp": {
+    "sysArea": {
+      "home": {
+        "title": "Sys Areas",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Sys Area",
+        "createOrEditLabel": "Create or edit a Sys Area",
+        "notFound": "No Sys Areas found"
+      },
+      "created": "A new Sys Area is created with identifier {{ param }}",
+      "updated": "A Sys Area is updated with identifier {{ param }}",
+      "deleted": "A Sys Area is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Sys Area {{ id }}?"
+      },
+      "detail": {
+        "title": "Sys Area"
+      },
+      "id": "ID",
+      "areaCode": "Area Code",
+      "areaName": "Area Name",
+      "provinceCode": "Province Code",
+      "districtCode": "District Code",
+      "wardCode": "Ward Code",
+      "description": "Description",
+      "isActive": "Is Active",
+      "status": "Status",
+      "locationLat": "Location Lat",
+      "locationLan": "Location Lan",
+      "createdBy": "Created By",
+      "createdDate": "Created Date",
+      "lastModifiedBy": "Last Modified By",
+      "lastModifiedDate": "Last Modified Date"
+    }
+  }
+}

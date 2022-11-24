@@ -1,0 +1,39 @@
+{
+  "provisionApp": {
+    "sysOrganization": {
+      "home": {
+        "title": "Sys Organizations",
+        "refreshListLabel": "Refresh list",
+        "createLabel": "Create a new Sys Organization",
+        "createOrEditLabel": "Create or edit a Sys Organization",
+        "notFound": "No Sys Organizations found"
+      },
+      "created": "A new Sys Organization is created with identifier {{ param }}",
+      "updated": "A Sys Organization is updated with identifier {{ param }}",
+      "deleted": "A Sys Organization is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Sys Organization {{ id }}?"
+      },
+      "detail": {
+        "title": "Sys Organization"
+      },
+      "id": "ID",
+      "parentId": "Parent Id",
+      "sysOrgCode": "Sys Org Code",
+      "sysOrgName": "Sys Org Name",
+      "sysOrgPath": "Sys Org Path",
+      "sysOrgFullPath": "Sys Org Full Path",
+      "description": "Description",
+      "address": "Address",
+      "type": "Type",
+      "tenantId": "Tenant Id",
+      "sysOrgType": "Sys Org Type",
+      "isActive": "Is Active",
+      "status": "Status",
+      "createdBy": "Created By",
+      "createdDate": "Created Date",
+      "lastModifiedBy": "Last Modified By",
+      "lastModifiedDate": "Last Modified Date"
+    }
+  }
+}

@@ -1,0 +1,58 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="sysOrganizationArea">
+      <h2 data-cy="sysOrganizationAreaDetailsHeading">
+        <span jhiTranslate="provisionApp.sysOrganizationArea.detail.title">Sys Organization Area</span>
+      </h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ sysOrganizationArea.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysOrganizationArea.orgId">Org Id</span></dt>
+        <dd>
+          <span>{{ sysOrganizationArea.orgId }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysOrganizationArea.areaId">Area Id</span></dt>
+        <dd>
+          <span>{{ sysOrganizationArea.areaId }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysOrganizationArea.isActive">Is Active</span></dt>
+        <dd>
+          <span>{{ sysOrganizationArea.isActive }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysOrganizationArea.createdBy">Created By</span></dt>
+        <dd>
+          <span>{{ sysOrganizationArea.createdBy }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysOrganizationArea.createdDate">Created Date</span></dt>
+        <dd>
+          <span>{{ sysOrganizationArea.createdDate | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysOrganizationArea.lastModifiedBy">Last Modified By</span></dt>
+        <dd>
+          <span>{{ sysOrganizationArea.lastModifiedBy }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysOrganizationArea.lastModifiedDate">Last Modified Date</span></dt>
+        <dd>
+          <span>{{ sysOrganizationArea.lastModifiedDate | formatMediumDatetime }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/sys-organization-area', sysOrganizationArea.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

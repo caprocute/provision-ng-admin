@@ -1,0 +1,171 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+      <h2 id="jhi-sys-camera-heading" data-cy="SysCameraCreateUpdateHeading" jhiTranslate="provisionApp.sysCamera.home.createOrEditLabel">
+        Create or edit a Sys Camera
+      </h2>
+
+      <div>
+        <jhi-alert-error></jhi-alert-error>
+
+        <div class="row mb-3" [hidden]="editForm.get('id')!.value == null">
+          <label class="form-label" jhiTranslate="global.field.id" for="field_id">ID</label>
+          <input type="number" class="form-control" name="id" id="field_id" data-cy="id" formControlName="id" [readonly]="true" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.sysCamera.camCode" for="field_camCode">Cam Code</label>
+          <input type="text" class="form-control" name="camCode" id="field_camCode" data-cy="camCode" formControlName="camCode" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.sysCamera.camName" for="field_camName">Cam Name</label>
+          <input type="text" class="form-control" name="camName" id="field_camName" data-cy="camName" formControlName="camName" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.sysCamera.areaId" for="field_areaId">Area Id</label>
+          <input type="number" class="form-control" name="areaId" id="field_areaId" data-cy="areaId" formControlName="areaId" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.sysCamera.branch" for="field_branch">Branch</label>
+          <input type="text" class="form-control" name="branch" id="field_branch" data-cy="branch" formControlName="branch" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.sysCamera.origin" for="field_origin">Origin</label>
+          <input type="text" class="form-control" name="origin" id="field_origin" data-cy="origin" formControlName="origin" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.sysCamera.description" for="field_description">Description</label>
+          <input
+            type="text"
+            class="form-control"
+            name="description"
+            id="field_description"
+            data-cy="description"
+            formControlName="description"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.sysCamera.isActive" for="field_isActive">Is Active</label>
+          <input type="checkbox" class="form-check" name="isActive" id="field_isActive" data-cy="isActive" formControlName="isActive" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.sysCamera.status" for="field_status">Status</label>
+          <input type="checkbox" class="form-check" name="status" id="field_status" data-cy="status" formControlName="status" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.sysCamera.locationLat" for="field_locationLat">Location Lat</label>
+          <input
+            type="number"
+            class="form-control"
+            name="locationLat"
+            id="field_locationLat"
+            data-cy="locationLat"
+            formControlName="locationLat"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.sysCamera.locationLan" for="field_locationLan">Location Lan</label>
+          <input
+            type="number"
+            class="form-control"
+            name="locationLan"
+            id="field_locationLan"
+            data-cy="locationLan"
+            formControlName="locationLan"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.sysCamera.urlSFTP" for="field_urlSFTP">Url SFTP</label>
+          <input type="text" class="form-control" name="urlSFTP" id="field_urlSFTP" data-cy="urlSFTP" formControlName="urlSFTP" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.sysCamera.urlLiveStream" for="field_urlLiveStream">Url Live Stream</label>
+          <input
+            type="text"
+            class="form-control"
+            name="urlLiveStream"
+            id="field_urlLiveStream"
+            data-cy="urlLiveStream"
+            formControlName="urlLiveStream"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.sysCamera.createdBy" for="field_createdBy">Created By</label>
+          <input type="text" class="form-control" name="createdBy" id="field_createdBy" data-cy="createdBy" formControlName="createdBy" />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.sysCamera.createdDate" for="field_createdDate">Created Date</label>
+          <div class="d-flex">
+            <input
+              id="field_createdDate"
+              data-cy="createdDate"
+              type="datetime-local"
+              class="form-control"
+              name="createdDate"
+              formControlName="createdDate"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.sysCamera.lastModifiedBy" for="field_lastModifiedBy">Last Modified By</label>
+          <input
+            type="text"
+            class="form-control"
+            name="lastModifiedBy"
+            id="field_lastModifiedBy"
+            data-cy="lastModifiedBy"
+            formControlName="lastModifiedBy"
+          />
+        </div>
+
+        <div class="row mb-3">
+          <label class="form-label" jhiTranslate="provisionApp.sysCamera.lastModifiedDate" for="field_lastModifiedDate"
+            >Last Modified Date</label
+          >
+          <div class="d-flex">
+            <input
+              id="field_lastModifiedDate"
+              data-cy="lastModifiedDate"
+              type="datetime-local"
+              class="form-control"
+              name="lastModifiedDate"
+              formControlName="lastModifiedDate"
+              placeholder="YYYY-MM-DD HH:mm"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button type="button" id="cancel-save" data-cy="entityCreateCancelButton" class="btn btn-secondary" (click)="previousState()">
+          <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+        </button>
+
+        <button
+          type="submit"
+          id="save-entity"
+          data-cy="entityCreateSaveButton"
+          [disabled]="editForm.invalid || isSaving"
+          class="btn btn-primary"
+        >
+          <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

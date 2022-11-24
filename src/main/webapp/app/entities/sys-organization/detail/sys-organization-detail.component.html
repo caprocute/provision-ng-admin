@@ -1,0 +1,94 @@
+<div class="d-flex justify-content-center">
+  <div class="col-8">
+    <div *ngIf="sysOrganization">
+      <h2 data-cy="sysOrganizationDetailsHeading">
+        <span jhiTranslate="provisionApp.sysOrganization.detail.title">Sys Organization</span>
+      </h2>
+
+      <hr />
+
+      <jhi-alert-error></jhi-alert-error>
+
+      <jhi-alert></jhi-alert>
+
+      <dl class="row-md jh-entity-details">
+        <dt><span jhiTranslate="global.field.id">ID</span></dt>
+        <dd>
+          <span>{{ sysOrganization.id }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysOrganization.parentId">Parent Id</span></dt>
+        <dd>
+          <span>{{ sysOrganization.parentId }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysOrganization.sysOrgCode">Sys Org Code</span></dt>
+        <dd>
+          <span>{{ sysOrganization.sysOrgCode }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysOrganization.sysOrgName">Sys Org Name</span></dt>
+        <dd>
+          <span>{{ sysOrganization.sysOrgName }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysOrganization.sysOrgPath">Sys Org Path</span></dt>
+        <dd>
+          <span>{{ sysOrganization.sysOrgPath }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysOrganization.sysOrgFullPath">Sys Org Full Path</span></dt>
+        <dd>
+          <span>{{ sysOrganization.sysOrgFullPath }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysOrganization.description">Description</span></dt>
+        <dd>
+          <span>{{ sysOrganization.description }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysOrganization.address">Address</span></dt>
+        <dd>
+          <span>{{ sysOrganization.address }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysOrganization.type">Type</span></dt>
+        <dd>
+          <span>{{ sysOrganization.type }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysOrganization.tenantId">Tenant Id</span></dt>
+        <dd>
+          <span>{{ sysOrganization.tenantId }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysOrganization.sysOrgType">Sys Org Type</span></dt>
+        <dd>
+          <span>{{ sysOrganization.sysOrgType }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysOrganization.isActive">Is Active</span></dt>
+        <dd>
+          <span>{{ sysOrganization.isActive }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysOrganization.status">Status</span></dt>
+        <dd>
+          <span>{{ sysOrganization.status }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysOrganization.createdBy">Created By</span></dt>
+        <dd>
+          <span>{{ sysOrganization.createdBy }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysOrganization.createdDate">Created Date</span></dt>
+        <dd>
+          <span>{{ sysOrganization.createdDate | formatMediumDatetime }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysOrganization.lastModifiedBy">Last Modified By</span></dt>
+        <dd>
+          <span>{{ sysOrganization.lastModifiedBy }}</span>
+        </dd>
+        <dt><span jhiTranslate="provisionApp.sysOrganization.lastModifiedDate">Last Modified Date</span></dt>
+        <dd>
+          <span>{{ sysOrganization.lastModifiedDate | formatMediumDatetime }}</span>
+        </dd>
+      </dl>
+
+      <button type="submit" (click)="previousState()" class="btn btn-info" data-cy="entityDetailsBackButton">
+        <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span jhiTranslate="entity.action.back">Back</span>
+      </button>
+
+      <button type="button" [routerLink]="['/sys-organization', sysOrganization.id, 'edit']" class="btn btn-primary">
+        <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span jhiTranslate="entity.action.edit">Edit</span>
+      </button>
+    </div>
+  </div>
+</div>

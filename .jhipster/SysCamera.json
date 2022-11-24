@@ -1,0 +1,80 @@
+{
+  "applications": "*",
+  "changelogDate": "20221124073844",
+  "dto": "mapstruct",
+  "embedded": false,
+  "entityTableName": "sys_camera",
+  "fields": [
+    {
+      "fieldName": "camCode",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "camName",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "areaId",
+      "fieldType": "Long"
+    },
+    {
+      "fieldName": "branch",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "origin",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "isActive",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "status",
+      "fieldType": "Boolean"
+    },
+    {
+      "fieldName": "locationLat",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "locationLan",
+      "fieldType": "Float"
+    },
+    {
+      "fieldName": "urlSFTP",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "urlLiveStream",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "createdDate",
+      "fieldType": "Instant"
+    },
+    {
+      "fieldName": "lastModifiedBy",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lastModifiedDate",
+      "fieldType": "Instant"
+    }
+  ],
+  "fluentMethods": true,
+  "jpaMetamodelFiltering": false,
+  "name": "SysCamera",
+  "pagination": "pagination",
+  "readOnly": false,
+  "relationships": [],
+  "service": "serviceImpl"
+}

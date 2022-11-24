@@ -12,6 +12,10 @@
         "provinces": "Provinces",
         "districts": "Districts",
         "wards": "Wards",
+        "sysArea": "Sys Area",
+        "sysCamera": "Sys Camera",
+        "sysOrganization": "Sys Organization",
+        "sysOrganizationArea": "Sys Organization Area",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

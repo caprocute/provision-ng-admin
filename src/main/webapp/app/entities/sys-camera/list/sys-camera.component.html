@@ -1,0 +1,158 @@
+<div>
+  <h2 id="page-heading" data-cy="SysCameraHeading">
+    <span jhiTranslate="provisionApp.sysCamera.home.title">Sys Cameras</span>
+
+    <div class="d-flex justify-content-end">
+      <button class="btn btn-info me-2" (click)="loadPage()" [disabled]="isLoading">
+        <fa-icon icon="sync" [spin]="isLoading"></fa-icon>
+        <span jhiTranslate="provisionApp.sysCamera.home.refreshListLabel">Refresh List</span>
+      </button>
+
+      <button
+        id="jh-create-entity"
+        data-cy="entityCreateButton"
+        class="btn btn-primary jh-create-entity create-sys-camera"
+        [routerLink]="['/sys-camera/new']"
+      >
+        <fa-icon icon="plus"></fa-icon>
+        <span jhiTranslate="provisionApp.sysCamera.home.createLabel"> Create a new Sys Camera </span>
+      </button>
+    </div>
+  </h2>
+
+  <jhi-alert-error></jhi-alert-error>
+
+  <jhi-alert></jhi-alert>
+
+  <div class="alert alert-warning" id="no-result" *ngIf="sysCameras?.length === 0">
+    <span jhiTranslate="provisionApp.sysCamera.home.notFound">No sysCameras found</span>
+  </div>
+
+  <div class="table-responsive" id="entities" *ngIf="sysCameras && sysCameras.length > 0">
+    <table class="table table-striped" aria-describedby="page-heading">
+      <thead>
+        <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" (sortChange)="loadPage()">
+          <th scope="col" jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
+          <th scope="col" jhiSortBy="camCode">
+            <span jhiTranslate="provisionApp.sysCamera.camCode">Cam Code</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="camName">
+            <span jhiTranslate="provisionApp.sysCamera.camName">Cam Name</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="areaId">
+            <span jhiTranslate="provisionApp.sysCamera.areaId">Area Id</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="branch">
+            <span jhiTranslate="provisionApp.sysCamera.branch">Branch</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="origin">
+            <span jhiTranslate="provisionApp.sysCamera.origin">Origin</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="description">
+            <span jhiTranslate="provisionApp.sysCamera.description">Description</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="isActive">
+            <span jhiTranslate="provisionApp.sysCamera.isActive">Is Active</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="status">
+            <span jhiTranslate="provisionApp.sysCamera.status">Status</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="locationLat">
+            <span jhiTranslate="provisionApp.sysCamera.locationLat">Location Lat</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="locationLan">
+            <span jhiTranslate="provisionApp.sysCamera.locationLan">Location Lan</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="urlSFTP">
+            <span jhiTranslate="provisionApp.sysCamera.urlSFTP">Url SFTP</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="urlLiveStream">
+            <span jhiTranslate="provisionApp.sysCamera.urlLiveStream">Url Live Stream</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="createdBy">
+            <span jhiTranslate="provisionApp.sysCamera.createdBy">Created By</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="createdDate">
+            <span jhiTranslate="provisionApp.sysCamera.createdDate">Created Date</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="lastModifiedBy">
+            <span jhiTranslate="provisionApp.sysCamera.lastModifiedBy">Last Modified By</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col" jhiSortBy="lastModifiedDate">
+            <span jhiTranslate="provisionApp.sysCamera.lastModifiedDate">Last Modified Date</span> <fa-icon icon="sort"></fa-icon>
+          </th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let sysCamera of sysCameras; trackBy: trackId" data-cy="entityTable">
+          <td>
+            <a [routerLink]="['/sys-camera', sysCamera.id, 'view']">{{ sysCamera.id }}</a>
+          </td>
+          <td>{{ sysCamera.camCode }}</td>
+          <td>{{ sysCamera.camName }}</td>
+          <td>{{ sysCamera.areaId }}</td>
+          <td>{{ sysCamera.branch }}</td>
+          <td>{{ sysCamera.origin }}</td>
+          <td>{{ sysCamera.description }}</td>
+          <td>{{ sysCamera.isActive }}</td>
+          <td>{{ sysCamera.status }}</td>
+          <td>{{ sysCamera.locationLat }}</td>
+          <td>{{ sysCamera.locationLan }}</td>
+          <td>{{ sysCamera.urlSFTP }}</td>
+          <td>{{ sysCamera.urlLiveStream }}</td>
+          <td>{{ sysCamera.createdBy }}</td>
+          <td>{{ sysCamera.createdDate | formatMediumDatetime }}</td>
+          <td>{{ sysCamera.lastModifiedBy }}</td>
+          <td>{{ sysCamera.lastModifiedDate | formatMediumDatetime }}</td>
+          <td class="text-end">
+            <div class="btn-group">
+              <button
+                type="submit"
+                [routerLink]="['/sys-camera', sysCamera.id, 'view']"
+                class="btn btn-info btn-sm"
+                data-cy="entityDetailsButton"
+              >
+                <fa-icon icon="eye"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.view">View</span>
+              </button>
+
+              <button
+                type="submit"
+                [routerLink]="['/sys-camera', sysCamera.id, 'edit']"
+                class="btn btn-primary btn-sm"
+                data-cy="entityEditButton"
+              >
+                <fa-icon icon="pencil-alt"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.edit">Edit</span>
+              </button>
+
+              <button type="submit" (click)="delete(sysCamera)" class="btn btn-danger btn-sm" data-cy="entityDeleteButton">
+                <fa-icon icon="times"></fa-icon>
+                <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="sysCameras && sysCameras.length > 0">
+    <div class="d-flex justify-content-center">
+      <jhi-item-count [params]="{ page: page, totalItems: totalItems, itemsPerPage: itemsPerPage }"></jhi-item-count>
+    </div>
+
+    <div class="d-flex justify-content-center">
+      <ngb-pagination
+        [collectionSize]="totalItems"
+        [(page)]="ngbPaginationPage"
+        [pageSize]="itemsPerPage"
+        [maxSize]="5"
+        [rotate]="true"
+        [boundaryLinks]="true"
+        (pageChange)="loadPage($event)"
+      ></ngb-pagination>
+    </div>
+  </div>
+</div>
